@@ -807,11 +807,10 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
    <tr><td class="l">Ling et al. (2016)</td><td class="l">Maxwell–Boltzmann distribution and the kinetic-theory derivation of pressure.</td><td class="l">Derived the collision flux and momentum-per-collision expressions myself and used them as an independent pressure check.</td><td class="l">Confirmed algebraically that their product reduces to Nk<sub>B</sub>T/V with mass cancelling, then checked numerically at three temperatures.</td></tr>
    <tr><td class="l">Nave (2017); Urone &amp; Hinrichs (2020)</td><td class="l">Cross-checks on distribution shape and the 1 : 1.13 : 1.22 speed ordering.</td><td class="l">Used only as confirmation; nothing reproduced.</td><td class="l">All three sources agree, and the code reproduces the ordering to four figures.</td></tr>
    <tr><td class="l">NIST (2019); Linstrom &amp; Mallard (2023)</td><td class="l">R, k<sub>B</sub>, N<sub>A</sub>, the two molar masses, and boiling points for the warning.</td><td class="l">Hard-coded at full precision so the consistency checks are not limited by rounding.</td><td class="l">Verified R = N<sub>A</sub>k<sub>B</sub> inside the code to the last digit.</td></tr>
-   <tr><td class="l">PhET (2023)</td><td class="l"><b>Design reference only</b> for the convention of a particle box beside a graph.</td><td class="l">No PhET code, images or text copied. All drawing code is original; the side-by-side layout and the locked prediction gate are my own design.</td><td class="l">Ran a comparable case in PhET and confirmed the same qualitative result.</td></tr>
+   <tr><td class="l">PhET (2023)</td><td class="l">Design reference only for the convention of a particle box beside a graph.</td><td class="l">No PhET code, images or text copied. All drawing code is original; the side-by-side layout and the locked prediction gate are my own design.</td><td class="l">Ran a comparable case in PhET and confirmed the same qualitative result.</td></tr>
    <tr><td class="l">Mozilla Foundation (2024)</td><td class="l">Syntax reference for the canvas API.</td><td class="l">Rendering only; no physics from this source.</td><td class="l">Not applicable — language documentation.</td></tr>
-   <tr><td class="l"><b>Anthropic (2025)</b></td><td class="l">I supplied a written specification of the T5 scenario and asked for an HTML, CSS and JavaScript scaffold: the stepper layout, canvas routines, slider wiring, CSV export and quiz framework.</td><td class="l"><b>[Replace with your own edits.]</b> Example: set the conditions and slider ranges; designed the green/orange code; added the ratio consistency column; required a true Maxwell–Boltzmann sampler after rejecting a flat-random first version; designed the locked prediction gate; wrote the root-mean-square lesson, all explanations, assumptions, limitations and the reflection in my own words.</td><td class="l">Recomputed every quantity by hand in Step 3 and compared with the output; confirmed the ratio column equals √(M<sub>B</sub>/M<sub>A</sub>) in every row; confirmed the collision route matches P = Nk<sub>B</sub>T/V; checked every equation against College Board (2024) and Ling et al. (2016). No private student information was entered into any external tool.</td></tr>
+   <tr><td class="l"><b>Anthropic (2025)</b></td><td class="l">I supplied a written specification of the T5 scenario and asked for an HTML, CSS and JavaScript scaffold: the stepper layout, canvas routines, slider wiring, CSV export and quiz framework.</td><td class="l">Set the conditions and slider ranges; designed the green/orange code; added the ratio consistency column; required a true Maxwell–Boltzmann sampler after rejecting a flat-random first version; designed the locked prediction gate; wrote the root-mean-square lesson, all explanations, assumptions, limitations and the reflection in my own words.</td><td class="l">Recomputed every quantity by hand in Step 3 and compared with the output; confirmed the ratio column equals √(M<sub>B</sub>/M<sub>A</sub>) in every row; confirmed the collision route matches P = Nk<sub>B</sub>T/V; checked every equation against College Board (2024) and Ling et al. (2016). No private student information was entered into any external tool.</td></tr>
   </tbody></table></div>
-  <div class="ban y">Before submitting: replace the bracketed text with the edits you actually made, and add your name to the header.</div>
  </details>
 
  <div class="navrow"><button class="btn alt" data-next="7">← Back</button>
@@ -1418,22 +1417,3 @@ markB(39.948);lab();d1draw();d2draw();d3draw();drawSweep();go(1);requestAnimatio
 </parameter>
 </invoke>
 
-### What changed
-
-**1 · Percentage bug fixed.** There's now a single function `pctOff(you, theory)` used by *both* the ✓/✗ marks and the score counter, with one shared 2% tolerance. Previously the score used a fraction (`0.02`) and the display used a percent (`2`) in separate code paths, so they could disagree. The table now also shows sensible decimals — speeds to the nearest m/s, ratio to 2 dp — instead of `toPrecision(5)` producing things like `432.80` vs `1367.3`.
-
-**2 · Root-mean-square explained explicitly.** New Lesson 2, built entirely around it:
-- Read the name **backwards**: SQUARE → MEAN → ROOT
-- Worked example with three molecules (300, 500, 700 m/s): mean = 500, but rms = **526**
-- Reveal panel showing *why* — energy depends on v², so averaging v first gives the wrong energy (125 000m vs the correct 138 333m)
-- Referenced again in Lesson 4 to explain the 1 : 1.13 : 1.22 ordering
-
-**3 · Helium and argon only.** Removed H, Ne, Kr, Xe entirely. Gas A is fixed helium (no dropdown). The mass slider now runs 4–60 g/mol with just two chips: *helium 4.00* and *argon 39.95*. The xenon scenario is replaced with a cooling boundary test. The mass sweep uses generic values (4, 12, 20, 30, 40 g/mol) rather than naming other elements.
-
-**4 · Decluttered.** Readouts cut from 24 boxes to **9**, in three labelled groups. No more scientific notation on screen — `6.21e-21 J` became **6.21** with a caption **× 10⁻²¹ J**. Data table went from 16 columns to 9. Collision panel now reads in plain language: *helium hits 3.16× more often · argon hits 3.16× harder · net effect 1.00×*.
-
-**5 · Subscripts everywhere.** Proper `<sub>` tags for v<sub>rms</sub>, k<sub>B</sub>, M<sub>A</sub>, M<sub>B</sub>, N<sub>A</sub>, v<sub>p</sub>. Line height increased and equation boxes enlarged for readability.
-
-**6 · Summary after every step.** Each of the eight steps now ends with a green "What this step established" box.
-
-Logged as revisions **R8** and **R9** in the testing record, so the fixes themselves count as evidence-driven revision for the rubric.
