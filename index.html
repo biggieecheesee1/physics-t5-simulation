@@ -2,7 +2,7 @@
 <parameter name="command">rewrite</parameter>
 <parameter name="id">t5-guided</parameter>
 <parameter name="type">text/html</parameter>
-<parameter name="title">T5 — Guided Learning Path: Helium vs Argon at the Same Temperature</parameter>
+<parameter name="title">T5 — Helium vs Argon at the Same Temperature</parameter>
 <parameter name="content"><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +17,14 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 system-ui,"Segoe UI",Roboto,Arial,sans-serif}
 sub{font-size:.72em;line-height:0}
 
-.hdr{background:#0c2550;color:#fff;padding:12px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:70}
+.hdr{background:#0c2550;color:#fff;padding:13px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:70}
 .hdr .mark{width:30px;height:30px;border-radius:8px;background:#ffffff1f;display:grid;place-items:center;font-size:15px}
-.hdr h1{margin:0;font-size:16px;font-weight:650}
-.hdr small{display:block;opacity:.75;font-size:11px;font-weight:400}
+.hdr h1{margin:0;font-size:16.5px;font-weight:650}
 .hdr .live{margin-left:auto;font:600 11.5px system-ui;background:#ffffff14;border:1px solid #ffffff33;padding:4px 11px;border-radius:99px}
 
 .shell{display:grid;grid-template-columns:228px 1fr;max-width:1340px;margin:0 auto}
 @media(max-width:940px){.shell{grid-template-columns:1fr}}
-.rail{background:#fff;border-right:1px solid var(--line);padding:16px 12px;position:sticky;top:54px;align-self:start;max-height:calc(100vh - 54px);overflow:auto}
+.rail{background:#fff;border-right:1px solid var(--line);padding:16px 12px;position:sticky;top:56px;align-self:start;max-height:calc(100vh - 56px);overflow:auto}
 @media(max-width:940px){.rail{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--line);display:flex;gap:8px;overflow-x:auto;padding:10px}}
 .ring{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .ring b{font-size:12.5px;display:block}.ring span{font-size:11px;color:var(--mut)}
@@ -40,7 +39,7 @@ sub{font-size:.72em;line-height:0}
 .rstep .s{font-size:10.5px;color:var(--mut);display:block;font-weight:400}
 @media(max-width:940px){.rstep{white-space:nowrap;margin:0}.rstep .s{display:none}}
 
-main{padding:22px 24px 44px;max-width:1080px}
+main{padding:22px 24px 48px;max-width:1080px}
 .step{display:none;animation:in .25s ease}.step.on{display:block}
 @keyframes in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
 .lead{font:800 11px system-ui;letter-spacing:1.4px;color:var(--acc);text-transform:uppercase}
@@ -68,9 +67,8 @@ h2.big{font-size:26px;margin:3px 0 7px;line-height:1.22;letter-spacing:-.3px}
 label{display:block;font-size:12.3px;font-weight:650;color:var(--mut);margin-top:13px}
 .val{float:right;color:var(--acc);font:600 12.5px system-ui}
 input[type=range]{width:100%;margin-top:5px;accent-color:#1657b8}
-input[type=number],input[type=text]{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
-input[type=number]:focus,input[type=text]:focus{outline:2px solid #bcd4f5;border-color:var(--acc)}
-select{width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+input[type=number]{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+input[type=number]:focus{outline:2px solid #bcd4f5;border-color:var(--acc)}
 
 .btn{background:var(--acc);color:#fff;border:0;border-radius:9px;padding:10px 16px;font:650 13px system-ui;cursor:pointer;margin:9px 6px 0 0;transition:.14s}
 .btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
@@ -160,8 +158,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
 
 <div class="hdr">
  <div class="mark">⚛</div>
- <div><h1>T5 · Helium and Argon at the Same Temperature</h1>
-  <small>AP Physics 2 Thermodynamics Simulation Project — guided learning path</small></div>
+ <h1>T5 · Helium and Argon at the Same Temperature</h1>
  <div class="live" id="live">300 K · same ⟨KE⟩ · speed ratio 3.16</div>
 </div>
 
@@ -173,7 +170,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
    <circle id="prog" cx="23" cy="23" r="19" fill="none" stroke="#1657b8" stroke-width="5"
      stroke-dasharray="119.4" stroke-dashoffset="119.4" stroke-linecap="round" transform="rotate(-90 23 23)"/>
   </svg>
-  <div><b id="pTxt">Step 1 of 8</b><span id="pSub">getting started</span></div>
+  <div><b id="pTxt">Step 1 of 7</b><span id="pSub">getting started</span></div>
  </div>
  <div id="rail"></div>
 </aside>
@@ -198,22 +195,10 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
  <div class="card">
   <h3>Your route</h3>
   <div class="flow">
-   <i>1 Orient</i><s>→</s><i>2 Learn</i><s>→</s><i>3 Predict</i><s>→</s><i>4 Simulate</i><s>→</s><i>5 Scenarios</i><s>→</s><i>6 Data</i><s>→</s><i>7 Test</i><s>→</s><i>8 Reflect</i>
+   <i>1 Orient</i><s>→</s><i>2 Learn</i><s>→</s><i>3 Predict</i><s>→</s><i>4 Simulate</i><s>→</s><i>5 Scenarios</i><s>→</s><i>6 Test</i><s>→</s><i>7 Reflect</i>
   </div>
   <p class="note">Step 4 stays locked until you commit a prediction in Step 3. Predicting before seeing the answer is what makes the result stick — and the project requires an independently checked prediction made in advance.</p>
  </div>
-
- <details>
-  <summary>Project checkpoint 1 — Proposal</summary>
-  <table><thead><tr><th class="l">Item</th><th class="l">Statement</th></tr></thead><tbody>
-   <tr><td class="l"><b>Concept</b></td><td class="l">Temperature fixes the average translational kinetic energy per molecule, which contains no mass. Speed is then forced to depend on mass.</td></tr>
-   <tr><td class="l"><b>Audience</b></td><td class="l">An AP Physics 2 student who reads "same temperature" as "same speed."</td></tr>
-   <tr><td class="l"><b>Learning goal</b></td><td class="l">State that ⟨KE⟩ is equal, compute the speed ratio as √(M<sub>Ar</sub>/M<sub>He</sub>), and explain why both samples still exert the same pressure.</td></tr>
-   <tr><td class="l"><b>Variables changed</b></td><td class="l">Shared temperature T; molar mass of the second gas; shared particle number N; shared volume V.</td></tr>
-   <tr><td class="l"><b>Outputs measured</b></td><td class="l">v<sub>rms</sub>, ⟨KE⟩, pressure, wall-collision rate, momentum per collision.</td></tr>
-   <tr><td class="l"><b>Misconception</b></td><td class="l">Equal temperature implies equal molecular speed.</td></tr>
-  </tbody></table>
- </details>
 
  <div class="sum"><h4>What this step established</h4><ul>
   <li>The two systems differ in <b>exactly one way</b>: the mass of one atom. Volume, particle number and temperature are all matched.</li>
@@ -259,7 +244,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
   </div>
  </div>
 
- <!-- L2 : RMS explicit -->
+ <!-- L2 -->
  <div class="lesson">
   <div class="lh"><div class="n">2</div><b>What "root-mean-square" actually means</b></div>
   <div class="lb">
@@ -371,6 +356,37 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
  </div>
 
  <div class="card">
+  <h3>Governing equations and how each one drives the simulation</h3>
+  <div class="scroll" style="max-height:none"><table>
+   <thead><tr><th class="l">Equation</th><th class="l">What it says</th><th class="l">Where the program uses it</th></tr></thead><tbody>
+   <tr><td class="l"><b>⟨KE⟩ = <sup>3</sup>&frasl;<sub>2</sub> k<sub>B</sub> T</b></td>
+    <td class="l">Average translational kinetic energy per atom. No mass term.</td>
+    <td class="l">The single ⟨KE⟩ readout shared by both boxes, and the straight line on the ⟨KE⟩-against-temperature graph.</td></tr>
+   <tr><td class="l"><b>v<sub>rms</sub> = √(3 k<sub>B</sub> T / m) = √(3 R T / M)</b></td>
+    <td class="l">Root-mean-square speed, from solving <sup>1</sup>&frasl;<sub>2</sub>m⟨v²⟩ = <sup>3</sup>&frasl;<sub>2</sub>k<sub>B</sub>T.</td>
+    <td class="l">Sets on-screen atom speeds, both speed readouts, and the two curves on the required graph.</td></tr>
+   <tr><td class="l"><b>v<sub>He</sub> / v<sub>Ar</sub> = √(M<sub>Ar</sub> / M<sub>He</sub>)</b></td>
+    <td class="l">Temperature cancels, so the ratio depends on mass alone.</td>
+    <td class="l">The live ratio readout and the theory value printed beside it for comparison.</td></tr>
+   <tr><td class="l"><b>m = M / N<sub>A</sub></b></td>
+    <td class="l">Mass of one atom from the molar mass.</td>
+    <td class="l">Converts the molar-mass slider into the per-atom mass used in every microscopic quantity.</td></tr>
+   <tr><td class="l"><b>f(v) = 4π(m/2πk<sub>B</sub>T)<sup>3/2</sup> v² e<sup>−mv²/2k<sub>B</sub>T</sup></b></td>
+    <td class="l">Maxwell–Boltzmann speed distribution.</td>
+    <td class="l">Drawn as the two overlaid curves, and used to sample every animated atom's speed.</td></tr>
+   <tr><td class="l"><b>v<sub>p</sub> = √(2RT/M), v̄ = √(8RT/πM)</b></td>
+    <td class="l">Most probable and mean speeds.</td>
+    <td class="l">Marked on the distribution graph and printed under each box.</td></tr>
+   <tr><td class="l"><b>P V = N k<sub>B</sub> T</b></td>
+    <td class="l">Equation of state. Mass does not appear.</td>
+    <td class="l">The pressure readout, identical for both gases.</td></tr>
+   <tr><td class="l"><b>Φ = ¼(N/V)v̄ and Δp = 4k<sub>B</sub>T/v̄</b></td>
+    <td class="l">Wall-collision rate and momentum delivered per collision.</td>
+    <td class="l">Computed separately for each gas; their product is checked against P V = N k<sub>B</sub>T.</td></tr>
+  </tbody></table></div>
+ </div>
+
+ <div class="card">
   <h3>Constants and data <span class="tag">reference</span></h3>
   <div class="consts">
    <div class="cst"><b>Gas constant</b><code>R = 8.314462618 J·mol⁻¹·K⁻¹</code><span>use with M in kg/mol</span></div>
@@ -466,7 +482,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
     <li><b>Temperature</b> and <b>molar mass of gas B</b> are the two things you change. N and V are shared by both boxes, enforcing "equal particle numbers, equal volumes."</li>
     <li><b>Green readouts are the same</b> for both gases. <b>Orange readouts differ.</b> That colour code is the lesson.</li>
     <li><b>Drag left and right on the v<sub>rms</sub> graph</b> to scrub temperature.</li>
-    <li><b>Log row</b> saves the state to the data table in Step 6. <b>Reset</b> returns to helium versus argon at 300 K.</li>
+    <li><b>Log row</b> records the current state in the data table below the graphs. <b>Reset</b> returns to helium versus argon at 300 K.</li>
    </ol>
   </div>
 
@@ -502,11 +518,14 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
     <h3>Two containers, one reservoir</h3>
     <canvas id="box" width="900" height="400"></canvas>
 
-    <div class="grp"><div class="gt">Same for both <em>— fixed by temperature, particle number and volume</em></div>
+    <div class="grp"><div class="gt">Equilibrium state of each sample <em>— identical for both gases</em></div>
      <div class="read">
-      <div class="box same"><b>TEMPERATURE</b><span id="oT">300</span><i>K</i></div>
-      <div class="box same"><b>⟨KE⟩ PER ATOM</b><span id="oKE">6.21</span><i>× 10⁻²¹ J · identical</i></div>
-      <div class="box same"><b>PRESSURE</b><span id="oP">99.8</span><i>kPa · identical</i></div>
+      <div class="box same"><b>PRESSURE P</b><span id="oP">99.8</span><i>kPa</i></div>
+      <div class="box same"><b>VOLUME V</b><span id="oV">0.0250</span><i>m³</i></div>
+      <div class="box same"><b>TEMPERATURE T</b><span id="oT">300</span><i>K</i></div>
+      <div class="box same"><b>PARTICLE NUMBER N</b><span id="oN">6.02</span><i>× 10²³ atoms</i></div>
+      <div class="box same"><b>⟨KE⟩ PER ATOM</b><span id="oKE">6.21</span><i>× 10⁻²¹ J</i></div>
+      <div class="box same"><b>ENERGY TRANSFER</b><span id="oQ">0</span><i>J · at equilibrium</i></div>
      </div></div>
 
     <div class="grp"><div class="gt">Different <em>— fixed by mass</em></div>
@@ -546,6 +565,20 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
    <canvas id="mb" width="1180" height="450"></canvas>
   </div>
 
+  <div class="card">
+   <h3>Data table</h3>
+   <p class="note">Press <b>Log row</b> in the control panel to record the current state. The <b>⟨KE⟩</b> column holds one value because it is the same for both gases — that is the consistency check. The <b>ratio</b> column must equal the theory column.</p>
+   <div class="scroll" style="max-height:340px"><table id="tbl"><thead><tr>
+    <th>#</th><th>T (K)</th><th>M<sub>B</sub> (g/mol)</th>
+    <th>v<sub>rms</sub> He (m/s)</th><th>v<sub>rms</sub> B (m/s)</th>
+    <th>ratio</th><th>√(M<sub>B</sub>/M<sub>A</sub>)</th>
+    <th>⟨KE⟩ both (10⁻²¹ J)</th><th>P both (kPa)</th>
+   </tr></thead><tbody></tbody></table></div>
+   <button class="btn alt" id="csv">⬇ Download CSV</button>
+   <button class="btn alt" id="clr">Clear</button>
+   <span class="note" id="rc" style="margin-left:9px">0 rows</span>
+  </div>
+
   <details>
    <summary>Model explanation — elements, rules, assumptions, limitations</summary>
    <h4>Rules the program applies</h4>
@@ -558,6 +591,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
     <tr><td class="l">Blue dots, left box</td><td class="l">Helium atoms.</td><td class="l">Speed drawn from Maxwell–Boltzmann, rescaled by √(k<sub>B</sub>T/m).</td></tr>
     <tr><td class="l">Red dots, right box</td><td class="l">Gas B atoms.</td><td class="l">Same rule with the slider mass, so the visible ratio is exactly √(m<sub>B</sub>/m<sub>A</sub>).</td></tr>
     <tr><td class="l">Dot size</td><td class="l">Relative atomic mass.</td><td class="l">Cosmetic only. It carries no physics.</td></tr>
+    <tr><td class="l">Motion trails</td><td class="l">Instantaneous velocity.</td><td class="l">Trail length is proportional to speed.</td></tr>
     <tr><td class="l">Centre column</td><td class="l">Shared reservoir and the same-versus-different summary.</td><td class="l">Lists what the scenario forces equal.</td></tr>
    </tbody></table>
 
@@ -568,6 +602,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
     <tr><td class="l">One shared temperature</td><td class="l">Both containers touch the same reservoir.</td><td class="l">The approach to equilibrium is not modelled.</td></tr>
     <tr><td class="l">Equal N and V</td><td class="l">Required by the scenario, enforced by shared sliders.</td><td class="l">Isolates mass as the only difference.</td></tr>
     <tr><td class="l">Classical statistics</td><td class="l">Valid well above the quantum regime for both gases at these temperatures.</td><td class="l">Fails for helium below about 3 K.</td></tr>
+    <tr><td class="l">Rigid containers, W = 0</td><td class="l">Walls cannot move, so no boundary work is exchanged.</td><td class="l">Keeps the comparison purely about kinetic energy and speed.</td></tr>
    </tbody></table>
 
    <h4>Limitations</h4>
@@ -576,6 +611,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
     <li><b>Atoms pass through each other.</b> The distribution is correct but individual trajectories are not.</li>
     <li><b>60 dots in two dimensions at reduced speed.</b> A real sample is 10²³ atoms in 3-D at hundreds of m/s.</li>
     <li><b>Monatomic only.</b> Setting the mass near 28 g/mol does not make the model nitrogen.</li>
+    <li><b>Separate containers only.</b> There is no mixed-gas mode, so partial pressures are outside scope.</li>
    </ul>
   </details>
 
@@ -596,7 +632,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
  <p class="sub">Decide your answer first, then load the setup and check it.</p>
 
  <div class="sc">
-  <div class="st"><span class="badge">SCENARIO 1</span><b>The assigned case — helium versus argon at 300 K</b></div>
+  <div class="st"><span class="badge">SCENARIO 1 · TYPICAL CASE</span><b>The assigned case — helium versus argon at 300 K</b></div>
   <p><b>Predict:</b> which readouts match and which differ, and by what factor.</p>
   <p class="note"><b>Expect:</b> green readouts identical; speed ratio 3.16.</p>
   <p class="note"><b>Why:</b> temperature fixes <sup>1</sup>&frasl;<sub>2</sub>m⟨v²⟩, so it equalises the <i>product</i> of mass and mean square speed, not the speed itself. Argon is about 10× heavier, so its mean square speed is about 10× smaller and its rms speed √10 ≈ 3.16× smaller.</p>
@@ -604,7 +640,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
  </div>
 
  <div class="sc">
-  <div class="st"><span class="badge">SCENARIO 2</span><b>Heat both to 900 K — does the gap close?</b></div>
+  <div class="st"><span class="badge">SCENARIO 2 · COMPARISON</span><b>Heat both to 900 K — does the gap close?</b></div>
   <p><b>Predict:</b> by what factor does each speed change, and what happens to the ratio?</p>
   <p class="note"><b>Expect:</b> both speeds × √3 = 1.73; the ratio does not move from 3.16.</p>
   <p class="note"><b>Why:</b> the ratio is √(M<sub>Ar</sub>/M<sub>He</sub>) and temperature cancels out of it. <b>No temperature exists at which these two gases move alike.</b> This is the most direct answer to the assigned question.</p>
@@ -626,7 +662,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
    <thead><tr><th class="l">Boundary test</th><th class="l">Prediction</th><th class="l">What the model does</th><th class="l">Verdict</th></tr></thead><tbody>
    <tr><td class="l">Both boxes helium</td><td class="l">Ratio → 1.00</td><td class="l">Ratio 1.00; curves overlap exactly.</td><td class="l"><span class="ok">Valid</span> — degenerates correctly.</td></tr>
    <tr><td class="l">Cool to 50 K with argon</td><td class="l">v<sub>rms</sub> → 177 m/s, but argon boils at 87 K.</td><td class="l">Reports the number and shows a red warning.</td><td class="l"><span class="bad">Out of scope</span> — correct arithmetic, meaningless physics.</td></tr>
-   <tr><td class="l">Extrapolate to T = 0 K</td><td class="l">⟨KE⟩ and v<sub>rms</sub> both → 0.</td><td class="l">The ⟨KE⟩ fit gives intercept ≈ 0, r² = 1.00.</td><td class="l"><span class="warn">Valid in maths, not in physics</span> — quantum motion persists at 0 K.</td></tr>
+   <tr><td class="l">Extrapolate to T = 0 K</td><td class="l">⟨KE⟩ and v<sub>rms</sub> both → 0.</td><td class="l">Both graphs pass through the origin.</td><td class="l"><span class="warn">Valid in maths, not in physics</span> — quantum motion persists at 0 K.</td></tr>
    <tr><td class="l">Raise argon until it matches helium</td><td class="l">T = 300 × 39.948/4.0026 ≈ 2994 K.</td><td class="l">The slider caps at 1500 K, so it cannot be reached.</td><td class="l"><span class="warn">Revealing</span> — and argon would start to ionise there anyway.</td></tr>
   </tbody></table></div>
   <div style="margin-top:11px"><button class="btn gho" data-preset="cold" data-goto="4">Load 100 K</button>
@@ -640,67 +676,12 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
  </ul></div>
 
  <div class="navrow"><button class="btn alt" data-next="4">← Back</button>
-  <span class="sp"></span><button class="btn big" data-next="6">Next: investigate with data →</button></div>
+  <span class="sp"></span><button class="btn big" data-next="6">Next: test and validate →</button></div>
 </section>
 
 <!-- ======================= 6 ======================= -->
 <section class="step" id="s6">
- <div class="lead">Step 6 · Investigate</div>
- <h2 class="big">Five-value sweeps and the data table</h2>
- <p class="sub">Each sweep loads its values into the simulator one at a time, logs the result, then fits the data.</p>
-
- <div class="card">
-  <div class="g2">
-   <div>
-    <label>Variable to investigate <select id="sv">
-     <option value="T">Temperature T (K)</option>
-     <option value="M">Molar mass of gas B (g/mol)</option>
-    </select></label>
-    <label>Five values<input type="text" id="svals" value="100, 200, 300, 400, 500"></label>
-    <button class="btn" id="sweep">Run sweep and fit</button>
-    <button class="btn alt" id="sweepCsv">⬇ CSV</button>
-    <div class="ban i" id="sNote">Press <b>Run sweep and fit</b> to generate the table, the plot and the interpretation.</div>
-   </div>
-   <div><canvas id="swc" width="640" height="340"></canvas></div>
-  </div>
-  <div class="scroll" id="sout" style="margin-top:14px"><p class="note" style="padding:12px">No sweep run yet.</p></div>
- </div>
-
- <div class="card">
-  <h3>What the two sweeps show</h3>
-  <p><b>Temperature sweep.</b> Against T the curves bend. Against <b>√T</b> they straighten into lines through the origin. The ratio column is constant at every temperature, so heating cannot close the gap.</p>
-  <p><b>Mass sweep.</b> Against M the curve falls off. Against <b>1/√M</b> it is a straight line through the origin. Meanwhile <b>⟨KE⟩ is the same number in every row</b> — the single most important observation in this project.</p>
-  <div><button class="btn gho" data-sw="T">Run the temperature sweep</button>
-   <button class="btn gho" data-sw="M">Run the mass sweep</button></div>
- </div>
-
- <div class="card">
-  <h3>Data table</h3>
-  <p class="note">The <b>⟨KE⟩</b> column holds one value because it is the same for both gases — that is the consistency check. The <b>ratio</b> column must equal the theory column.</p>
-  <div class="scroll" style="max-height:380px"><table id="tbl"><thead><tr>
-   <th>#</th><th>T (K)</th><th>M<sub>B</sub> (g/mol)</th>
-   <th>v<sub>rms</sub> He (m/s)</th><th>v<sub>rms</sub> B (m/s)</th>
-   <th>ratio</th><th>√(M<sub>B</sub>/M<sub>A</sub>)</th>
-   <th>⟨KE⟩ both (10⁻²¹ J)</th><th>P both (kPa)</th>
-  </tr></thead><tbody></tbody></table></div>
-  <button class="btn alt" id="csv">⬇ Download CSV</button>
-  <button class="btn alt" id="clr">Clear</button>
-  <span class="note" id="rc" style="margin-left:9px">0 rows</span>
- </div>
-
- <div class="sum"><h4>What the data showed</h4><ul>
-  <li>The measured ratio column matches the theory column <b>in every row</b>, confirming v<sub>rms</sub> ∝ 1/√M.</li>
-  <li>The ⟨KE⟩ column is constant across the whole mass sweep — <b>mass changes speed and nothing else</b>.</li>
-  <li>Straight-line fits with intercept ≈ 0 confirm the relationships are true proportions, not just trends.</li>
- </ul></div>
-
- <div class="navrow"><button class="btn alt" data-next="5">← Back</button>
-  <span class="sp"></span><button class="btn big" data-next="7">Next: test and validate →</button></div>
-</section>
-
-<!-- ======================= 7 ======================= -->
-<section class="step" id="s7">
- <div class="lead">Step 7 · Test and validate</div>
+ <div class="lead">Step 6 · Test and validate</div>
  <h2 class="big">Does it represent the concept correctly?</h2>
  <p class="sub">Not "does it run" — does it agree with independent calculations and behave sensibly at its limits?</p>
 
@@ -719,27 +700,6 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
   </tbody></table></div>
  </details>
 
- <details>
-  <summary>Revision log</summary>
-  <table><thead><tr><th>ID</th><th class="l">Evidence</th><th class="l">Change made</th></tr></thead><tbody>
-   <tr><td><b>R1</b></td><td class="l">Moving the mass slider left the gas chip highlighted, so the label disagreed with the value.</td><td class="l">Any manual slider move clears the chip highlight.</td></tr>
-   <tr><td><b>R2</b></td><td class="l">The model silently reported gas speeds for argon below its boiling point.</td><td class="l">Added a condensation warning using normal boiling points.</td></tr>
-   <tr><td><b>R3</b></td><td class="l">A peer could not explain why the pressures match.</td><td class="l">Added the three collision readouts showing rate, momentum and their product.</td></tr>
-   <tr><td><b>R4</b></td><td class="l">A peer read dot size as physically meaningful.</td><td class="l">Labelled dot size as cosmetic on the canvas and in the element table.</td></tr>
-   <tr><td><b>R5</b></td><td class="l">Animated speeds were drawn from a flat random distribution and did not match the plotted curve.</td><td class="l">Rewrote the sampler to use a true Maxwell–Boltzmann distribution.</td></tr>
-   <tr><td><b>R6</b></td><td class="l">The constants line was clipped, hiding the value of R.</td><td class="l">Replaced the fixed-width block with wrapping constant cards.</td></tr>
-   <tr><td><b>R7</b></td><td class="l">Testers explored before predicting, so predictions were not independent.</td><td class="l">Locked Step 4 until predictions are submitted in Step 3.</td></tr>
-   <tr><td><b>R8</b></td><td class="l">The prediction scorecard showed percentage differences that disagreed with the tick marks.</td><td class="l">Rewrote the comparison so one shared percentage function drives both the tick and the score, and reduced all readouts to fixed decimal places.</td></tr>
-   <tr><td><b>R9</b></td><td class="l">A reader found the readout panel cluttered and hard to scan.</td><td class="l">Cut the readouts from twenty-four to nine, grouped them under three headings, and replaced scientific notation with plain numbers and unit captions.</td></tr>
-  </tbody></table>
- </details>
-
- <details>
-  <summary>Checkpoints 2 and 3</summary>
-  <p><b>Model review.</b> The rules were written out and checked before coding. One error was caught: the first plan gave the two boxes different pressures "because argon is heavier," which contradicts P = Nk<sub>B</sub>T/V. It was corrected before any code was written.</p>
-  <p><b>Prototype review.</b> The peer session is the last row of the testing record; revisions R3 and R4 were the response, and R7 followed from watching testers skip the prediction.</p>
- </details>
-
  <div class="card">
   <h3>Final self-check</h3>
   <div id="quiz"></div>
@@ -751,16 +711,16 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
  <div class="sum"><h4>What testing established</h4><ul>
   <li>The simulation agrees with hand calculations to four significant figures, and with a second independent route through collision theory.</li>
   <li>At its limits it either degenerates correctly or warns the user — it never reports nonsense silently.</li>
-  <li>Every revision in the log was caused by observed evidence, not guesswork.</li>
+  <li>Every revision was caused by observed evidence, not guesswork.</li>
  </ul></div>
 
- <div class="navrow"><button class="btn alt" data-next="6">← Back</button>
-  <span class="sp"></span><button class="btn big" data-next="8">Next: reflect and cite →</button></div>
+ <div class="navrow"><button class="btn alt" data-next="5">← Back</button>
+  <span class="sp"></span><button class="btn big" data-next="7">Next: reflect and cite →</button></div>
 </section>
 
-<!-- ======================= 8 ======================= -->
-<section class="step" id="s8">
- <div class="lead">Step 8 · Reflect and cite</div>
+<!-- ======================= 7 ======================= -->
+<section class="step" id="s7">
+ <div class="lead">Step 7 · Reflect and cite</div>
  <h2 class="big">What this teaches, what it leaves out, and where it came from</h2>
 
  <div class="g2">
@@ -813,7 +773,7 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
   </tbody></table></div>
  </details>
 
- <div class="navrow"><button class="btn alt" data-next="7">← Back</button>
+ <div class="navrow"><button class="btn alt" data-next="6">← Back</button>
   <span class="sp"></span><button class="btn gho" data-next="1">↺ Start over</button></div>
 </section>
 
@@ -825,9 +785,8 @@ summary{cursor:pointer;font:650 13.3px system-ui;color:var(--acc)}
 "use strict";
 var R=8.314462618,NA=6.02214076e23,KB=1.380649e-23;
 var M_HE=0.0040026, M_AR=0.039948;
-var BP={"4.0026":4.22,"39.948":87.3};
 function $(i){return document.getElementById(i);}
-var st={rows:[],sw:null,paused:false,drag:false,cur:1,unlocked:false,lesson:{},maxStep:3};
+var st={rows:[],paused:false,drag:false,cur:1,unlocked:false,lesson:{},maxStep:3};
 
 /* ---------- physics ---------- */
 function vrms(T,M){return Math.sqrt(3*R*T/M);}
@@ -850,8 +809,7 @@ function bpOf(Mg){
 /* ---------- stepper ---------- */
 var STEPS=[["Orientation","the scenario"],["Fundamentals","four core ideas"],
  ["Predict","commit first"],["Simulation","the model"],
- ["Scenarios","four cases"],["Investigate","sweeps and data"],
- ["Test","validation"],["Reflect","and cite"]];
+ ["Scenarios","four cases"],["Test","validation"],["Reflect","and cite"]];
 (function(){var h="",i;
  for(i=0;i<STEPS.length;i++)
   h+="<div class='rstep"+(i===0?" on":"")+"' data-s='"+(i+1)+"'><div class='num'>"+(i+1)+
@@ -869,16 +827,14 @@ function go(n){
  $("pTxt").textContent="Step "+n+" of "+STEPS.length;
  $("pSub").textContent=STEPS[n-1][1];
  window.scrollTo({top:0,behavior:"smooth"});
- if(n>=4)refresh(); if(n===6)drawSweep();}
+ if(n>=4)refresh();}
 $("rail").addEventListener("click",function(e){
  var t=e.target.closest?e.target.closest(".rstep"):null; if(t)go(t.getAttribute("data-s"));});
 document.addEventListener("click",function(e){
  if(!e.target.getAttribute)return;
  var n=e.target.getAttribute("data-next"); if(n)go(n);
  var p=e.target.getAttribute("data-preset"); if(p){pre(p);markP(p);}
- var g=e.target.getAttribute("data-goto"); if(g)go(g);
- var sw=e.target.getAttribute("data-sw");
- if(sw){$("sv").value=sw;$("svals").value=sw==="T"?"100, 200, 300, 400, 500":"4, 12, 20, 30, 40";runSweep();}});
+ var g=e.target.getAttribute("data-goto"); if(g)go(g);});
 
 /* ---------- reveals ---------- */
 ["r1","r2","r3a","r3b","r3c","r3d","r4"].forEach(function(id){
@@ -984,8 +940,8 @@ document.querySelectorAll('.q[data-l]').forEach(function(box){
    "Answer all four quick checks to continue. <b>"+n+" of 4 correct.</b>";
   $("toPredict").disabled=(n<4);});});
 
-/* ---------- prediction gate (FIXED percentage logic) ---------- */
-var TOL=2.0;                         /* percent */
+/* ---------- prediction gate ---------- */
+var TOL=2.0;
 function pctOff(you,th){ return Math.abs((you-th)/th)*100; }
 function cmpRow(name,you,th,unit,dp){
  var e=pctOff(you,th), ok=(e<=TOL);
@@ -1011,7 +967,6 @@ $("lockIn").addEventListener("click",function(){
  if(isNaN(a)||isNaN(b)||isNaN(c)||isNaN(d)||pick5<0||pick6<0){
   $("predOut").innerHTML="<div class='ban r'>Fill in all four numbers and both multiple-choice questions first.</div>";return;}
  var THa=vrms(300,M_HE), THb=vrms(300,M_AR), THr=THa/THb, THk=KEa(300)*1e21;
- /* one shared rule drives both the tick marks and the score */
  var sc=0;
  if(pctOff(a,THa)<=TOL)sc++;
  if(pctOff(b,THb)<=TOL)sc++;
@@ -1084,7 +1039,9 @@ $("reset").addEventListener("click",function(){
  st.rows=[];rowsOut();markP("assigned");markB(39.948);st.paused=false;
  $("pause").textContent="⏸ Freeze";seed();lab();refresh();
  $("status").className="ban i";$("status").textContent="Reset to the assigned case at 300 K.";});
-$("step").addEventListener("click",function(){logRow();});
+$("step").addEventListener("click",function(){logRow();
+ $("status").className="ban g";
+ $("status").innerHTML="<b>Row logged.</b> "+st.rows.length+" row"+(st.rows.length===1?"":"s")+" now in the data table below.";});
 $("clr").addEventListener("click",function(){st.rows=[];rowsOut();});
 $("chk").addEventListener("click",function(){var p=P(),w=vrms(p.T,p.MB),g=parseFloat($("pred").value);
  if(isNaN(g)){$("po").innerHTML="<span class='warn'>Enter a number first.</span>";return;}
@@ -1276,68 +1233,11 @@ function rowsOut(){var b=$("tbl").getElementsByTagName("tbody")[0],h="";
 function dl(n,t){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv"}));
  a.download=n;document.body.appendChild(a);a.click();document.body.removeChild(a);}
 $("csv").addEventListener("click",function(){
+ if(!st.rows.length){alert("Press Log row at least once first.");return;}
  var L=["row,T_K,MB_g_per_mol,vrms_He_m_s,vrms_B_m_s,ratio,sqrt_MB_over_MA,KE_both_1e-21J,P_both_kPa"];
  st.rows.forEach(function(r){L.push([r.i,r.T,r.MB,r.vA.toFixed(1),r.vB.toFixed(1),
   r.rat.toFixed(4),r.th.toFixed(4),r.ke.toFixed(3),r.Pk.toFixed(2)].join(","));});
  dl("T5_data.csv",L.join("\n"));});
-
-/* ---------- sweep ---------- */
-var sc2=$("swc").getContext("2d");
-function runSweep(){
- var key=$("sv").value;
- var vals=$("svals").value.split(",").map(parseFloat).filter(function(v){return !isNaN(v)&&v>0;});
- if(vals.length<5){$("sout").innerHTML="<p class='bad' style='padding:12px'>Enter at least five positive values.</p>";return;}
- var oT=$("T").value,oM=$("MB").value,rws="",xs=[],ysA=[],ysB=[],kes=[];
- vals.forEach(function(v){
-  if(key==="T")$("T").value=v;else $("MB").value=v;
-  var p=P(),T=p.T,vA=vrms(T,p.MA),vB=vrms(T,p.MB),ke=KEa(T)*1e21,Pa=p.n*R*T/p.V;
-  logRow();xs.push(v);ysA.push(vA);ysB.push(vB);kes.push(ke);
-  rws+="<tr><td>"+v+"</td><td>"+vA.toFixed(0)+"</td><td>"+vB.toFixed(0)+"</td><td>"+(vA/vB).toFixed(3)+
-   "</td><td>"+Math.sqrt(p.MB/p.MA).toFixed(3)+"</td><td>"+ke.toFixed(2)+"</td><td>"+(Pa/1000).toFixed(1)+"</td></tr>";});
- $("T").value=oT;$("MB").value=oM;lab();refresh();
- var lx=xs.map(function(v){return key==="T"?Math.sqrt(v):1/Math.sqrt(v/1000);}),ly=ysB.slice();
- var mx=lx.reduce(function(a,b){return a+b;})/lx.length,my=ly.reduce(function(a,b){return a+b;})/ly.length,sn=0,sd=0;
- lx.forEach(function(x,i){sn+=(x-mx)*(ly[i]-my);sd+=(x-mx)*(x-mx);});
- var sl=sn/sd,b0=my-sl*mx,ssr=0,sst=0;
- lx.forEach(function(x,i){var f=sl*x+b0;ssr+=(ly[i]-f)*(ly[i]-f);sst+=(ly[i]-my)*(ly[i]-my);});
- var r2=sst>0?1-ssr/sst:1,pN=P(),exp;
- if(key==="T"){var th=Math.sqrt(3*R/pN.MB);
-  exp="<b>Plotted against √T the data is a straight line.</b> Slope "+sl.toFixed(2)+
-   " against the theoretical √(3R/M) = "+th.toFixed(2)+", intercept "+b0.toFixed(2)+
-   " ≈ 0, r² = "+r2.toFixed(4)+". So v rms is proportional to √T. <b>The ratio column is the same in every row</b> — temperature cancels out of √(M<sub>B</sub>/M<sub>A</sub>), which is exactly why heating cannot close the speed gap.";
- }else{var th2=Math.sqrt(3*R*pN.T);
-  exp="<b>Plotted against 1/√M the data is a straight line.</b> Slope "+sl.toFixed(1)+
-   " against the theoretical √(3RT) = "+th2.toFixed(1)+", intercept "+b0.toFixed(1)+
-   " ≈ 0, r² = "+r2.toFixed(4)+". So v rms is proportional to 1/√M: four times the mass gives half the speed. <b>Meanwhile the ⟨KE⟩ column holds the same value "+
-   kes[0].toFixed(2)+" in every row, and so does the pressure column</b> — mass changes speed and nothing else.";}
- $("sout").innerHTML="<table><thead><tr><th>"+(key==="T"?"T (K)":"M<sub>B</sub> (g/mol)")+
-  "</th><th>v rms He (m/s)</th><th>v rms B (m/s)</th><th>ratio</th><th>√(M<sub>B</sub>/M<sub>A</sub>)</th>"+
-  "<th>⟨KE⟩ both (10⁻²¹ J)</th><th>P both (kPa)</th></tr></thead><tbody>"+rws+"</tbody></table>";
- $("sNote").innerHTML=exp+"<br><br><b>Held constant:</b> "+
-  (key==="T"?"M<sub>B</sub> = "+pN.MBg.toFixed(2)+" g/mol":"T = "+pN.T+" K")+
-  ", N = "+(pN.n*6.02214076).toFixed(2)+" × 10²³, V = "+pN.V.toFixed(4)+" m³.";
- st.sw={xs:lx,ysA:ysA,ysB:ysB,sl:sl,b0:b0,r2:r2,raw:xs,key:key,
-  lab:key==="T"?"√T   (K^½)":"1 / √M"};
- drawSweep();}
-function drawSweep(){var s=st.sw,W=640,H=340,m={l:70,r:18,t:50,b:44};
- if(!s){axes(sc2,W,H,m,1,1,"sweep variable","v rms (m/s)","Run a sweep to plot");return;}
- var xm=Math.max.apply(null,s.xs)*1.12,ym=Math.max.apply(null,s.ysA)*1.15;
- axes(sc2,W,H,m,xm,ym,s.lab,"v rms  (m/s)","Linearised sweep with best-fit line");
- var X=function(v){return m.l+(v/xm)*(W-m.l-m.r);},Y=function(v){return H-m.b-(v/ym)*(H-m.t-m.b);};
- sc2.strokeStyle="#9aa7bd";sc2.lineWidth=2;sc2.setLineDash([6,5]);
- sc2.beginPath();sc2.moveTo(X(0),Y(s.b0));sc2.lineTo(X(xm),Y(s.sl*xm+s.b0));sc2.stroke();sc2.setLineDash([]);
- sc2.fillStyle="#1b7fd4";s.xs.forEach(function(x,i){sc2.beginPath();sc2.arc(X(x),Y(s.ysA[i]),5,0,6.2832);sc2.fill();});
- sc2.fillStyle="#d2452c";s.xs.forEach(function(x,i){sc2.beginPath();sc2.arc(X(x),Y(s.ysB[i]),5,0,6.2832);sc2.fill();});
- sc2.textAlign="left";sc2.fillStyle="#5c6b86";sc2.font="12px system-ui";
- sc2.fillText("blue = helium · red = gas B · r² = "+s.r2.toFixed(4),14,36);}
-$("sweep").addEventListener("click",runSweep);
-$("sweepCsv").addEventListener("click",function(){if(!st.sw){alert("Run a sweep first.");return;}
- var L=[(st.sw.key==="T"?"T_K":"MB_g_per_mol")+",vrms_He,vrms_B,ratio"];
- st.sw.raw.forEach(function(x,i){L.push(x+","+st.sw.ysA[i].toFixed(1)+","+st.sw.ysB[i].toFixed(1)+","+
-  (st.sw.ysA[i]/st.sw.ysB[i]).toFixed(4));});
- dl("T5_sweep.csv",L.join("\n"));});
-$("sv").addEventListener("change",function(){
- $("svals").value=$("sv").value==="T"?"100, 200, 300, 400, 500":"4, 12, 20, 30, 40";});
 
 /* ---------- final quiz ---------- */
 var QS=[
@@ -1392,6 +1292,9 @@ function refresh(){
  $("oT").textContent=T.toFixed(0);
  $("oKE").textContent=(KEa(T)*1e21).toFixed(2);
  $("oP").textContent=(Pa/1000).toFixed(1);
+ $("oV").textContent=p.V.toFixed(4);
+ $("oN").textContent=(p.n*6.02214076).toFixed(2);
+ $("oQ").textContent="0";
  $("ovA").textContent=vA.toFixed(0);
  $("ovB").textContent=vB.toFixed(0);
  $("oRat").textContent=(vA/vB).toFixed(2);
@@ -1409,11 +1312,10 @@ function loop(now){var dt=(now-last)/1000;last=now;if(dt>.1)dt=.1;
   if(!st.paused){move(pa,AX,dt,p.T,p.MA);move(pb,BXx,dt,p.T,p.MB);}
   drawBox();}
  requestAnimationFrame(loop);}
-markB(39.948);lab();d1draw();d2draw();d3draw();drawSweep();go(1);requestAnimationFrame(loop);
+markB(39.948);lab();d1draw();d2draw();d3draw();go(1);requestAnimationFrame(loop);
 })();
 </script>
 </body>
 </html>
 </parameter>
 </invoke>
-
